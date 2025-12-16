@@ -155,7 +155,7 @@
             100% { background-position: 200% 50%; }
         }
 
-        /* Bar Animations */
+        /* Bar Animations - FIXED SELECTORS */
         .bar-fill {
             width: 100%;
             height: 0;
@@ -163,7 +163,9 @@
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }
-        .reveal-on-scroll.visible .bar-fill {
+        /* CRITICAL FIX: Allow stagger-item parents to trigger bar growth */
+        .reveal-on-scroll.visible .bar-fill,
+        .stagger-item.visible .bar-fill {
             height: var(--target-height);
         }
         
@@ -226,6 +228,18 @@
         .custom-scroll::-webkit-scrollbar { width: 4px; }
         .custom-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
         .custom-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+        
+        /* New Stagger/3D Reveal Classes */
+        .stagger-item {
+            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, box-shadow 0.5s ease;
+            transform: translateY(30px) rotateX(10deg);
+            opacity: 0;
+            transform-style: preserve-3d;
+        }
+        .stagger-item.visible {
+            transform: translateY(0px) rotateX(0deg);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -244,8 +258,8 @@
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 p-6 mix-blend-difference text-white flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent transition-transform duration-300" id="navbar">
         <a href="https://www.healyou.io" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group">
-            <!-- LOGO: Leaf Icon -->
-            <div class="w-8 h-8 rounded flex items-center justify-center text-teal-400 group-hover:text-teal-300 transition-colors">
+            <!-- LOGO: Leaf Icon with slight scroll-aware rotation -->
+            <div id="nav-logo" class="w-8 h-8 rounded flex items-center justify-center text-teal-400 group-hover:text-teal-300 transition-colors">
                 <i data-lucide="leaf" class="w-7 h-7"></i>
             </div>
             <span class="font-display font-bold tracking-widest text-lg group-hover:text-teal-400 transition-colors">HEALYOU</span>
@@ -264,7 +278,7 @@
 
     <main>
         <!-- 1. BANNER -->
-        <section id="vision" class="justify-center items-center text-center h-screen pt-32 md:pt-40"> <!-- Added pt-32 for header clearance -->
+        <section id="vision" class="justify-center items-center text-center h-screen pt-32 md:pt-40"> <!-- Adjusted PT for header clearance -->
             <div class="max-w-6xl relative z-10">
                 <div class="inline-flex items-center gap-2 px-3 py-1 border border-teal-500/30 bg-teal-900/10 text-teal-400 font-mono text-xs tracking-[0.2em] mb-8 backdrop-blur-md rounded-full opacity-0 animate-fade-in" style="animation-delay: 2s; animation-fill-mode: forwards;">
                     <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
@@ -272,8 +286,8 @@
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl lg:text-9xl font-serif font-bold leading-none mb-8 tracking-tighter mix-blend-overlay">
-                    <span class="block scramble-target" data-text="184億美元">184億美元</span>
-                    <span id="glitch-title" class="block text-gradient-animate opacity-0" style="transition: opacity 0.5s;">的沈默</span>
+                    <span id="hero-title-main" class="block scramble-target relative z-10" data-text="184億美元">184億美元</span>
+                    <span id="glitch-title" class="block text-gradient-animate opacity-0 relative z-10" style="transition: opacity 0.5s;">的沈默</span>
                 </h1>
                 
                 <p class="font-light text-slate-300 text-lg md:text-2xl max-w-2xl mx-auto mt-12 opacity-0 animate-fade-in fill-mode-forwards tracking-wide px-4" style="animation-delay: 2.5s;">
@@ -287,24 +301,24 @@
             </div>
         </section>
 
-        <!-- 2. MARKET FIT -->
+        <!-- 2. MARKET FIT (Staggered In) -->
         <section id="market" class="justify-center">
             <div class="max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div class="reveal-on-scroll">
                     <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-8 text-white leading-[1.2]">
                         當「面子」成為<br>最昂貴的<span class="text-teal-400 italic">醫療成本</span>
                     </h2>
-                    <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 text-justify border-l-2 border-teal-500/30 pl-6">
+                    <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 text-justify border-l-2 border-teal-500/30 pl-6 stagger-item" data-stagger-delay="0.1s">
                         在華語社會，承認心理問題等同於承認失敗。這道隱形的「面子高牆」，讓 92% 的患者選擇沉默，直到崩潰。而匿名數位諮商，是唯一能穿透這道牆的「特洛伊木馬」。
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 md:gap-8">
-                        <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors group">
+                        <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors stagger-item" data-stagger-delay="0.2s">
                             <div class="text-3xl md:text-4xl font-display font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">18 Mos</div>
                             <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest">Treatment Delay</div>
                             <p class="text-xs md:text-sm text-slate-400 mt-2">平均求助延遲期</p>
                         </div>
-                        <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors group">
+                        <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors stagger-item" data-stagger-delay="0.3s">
                             <div class="text-3xl md:text-4xl font-display font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">4.5x</div>
                             <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest">Preference</div>
                             <p class="text-xs md:text-sm text-slate-400 mt-2">數位匿名 vs 線下偏好</p>
@@ -312,7 +326,7 @@
                     </div>
                 </div>
                 
-                <div class="glass-panel p-8 md:p-12 rounded-3xl reveal-on-scroll relative">
+                <div class="glass-panel p-8 md:p-12 rounded-3xl reveal-on-scroll relative stagger-item" data-stagger-delay="0.4s">
                     <div class="absolute top-0 right-0 p-4 opacity-50">
                         <i data-lucide="shield-alert" class="text-teal-400 w-8 h-8"></i>
                     </div>
@@ -335,15 +349,15 @@
             <div class="section-line"></div>
         </section>
 
-        <!-- VISUAL BREAK SESSION 1 -->
-        <section class="justify-center items-center py-24 md:py-32 bg-black">
-            <div class="text-center reveal-on-scroll px-4">
-                <h2 class="big-impact-text mb-4">99% 的焦慮</h2>
-                <p class="text-xl md:text-2xl text-teal-500 font-serif italic">死於開口之前。</p>
+        <!-- VISUAL BREAK SESSION 1 (Scale Transition) -->
+        <section id="break-section" class="justify-center items-center py-24 md:py-32 bg-black">
+            <div class="text-center reveal-on-scroll px-4" id="break-text-container">
+                <h2 id="break-text-h2" class="big-impact-text mb-4">99% 的焦慮</h2>
+                <p id="break-text-p" class="text-xl md:text-2xl text-teal-500 font-serif italic">死於開口之前。</p>
             </div>
         </section>
 
-        <!-- 3. DEMOGRAPHICS -->
+        <!-- 3. DEMOGRAPHICS (Staggered Grid) -->
         <section id="data" class="flex-col justify-center bg-black/40">
             <div class="max-w-4xl w-full mx-auto mb-16 text-center reveal-on-scroll">
                 <span class="text-teal-500 font-mono text-xs uppercase tracking-widest">/// The Signal</span>
@@ -355,7 +369,7 @@
 
             <div class="max-w-7xl w-full mx-auto grid md:grid-cols-3 gap-8">
                 <!-- Cards -->
-                <div class="glass-panel p-8 md:p-10 rounded-2xl reveal-on-scroll text-center group border-t-4 border-t-indigo-500">
+                <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-indigo-500" data-stagger-delay="0.1s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">02:00</div>
                     <div class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-6">Peak Hour</div>
                     <p class="text-slate-400 leading-relaxed text-sm md:text-base">
@@ -363,7 +377,7 @@
                     </p>
                 </div>
 
-                <div class="glass-panel p-8 md:p-10 rounded-2xl reveal-on-scroll text-center group border-t-4 border-t-pink-500" style="transition-delay: 0.1s;">
+                <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-pink-500" data-stagger-delay="0.2s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">72%</div>
                     <div class="text-xs font-bold text-pink-400 uppercase tracking-widest mb-6">Female Users</div>
                     <p class="text-slate-400 leading-relaxed text-sm md:text-base">
@@ -371,7 +385,7 @@
                     </p>
                 </div>
 
-                <div class="glass-panel p-8 md:p-10 rounded-2xl reveal-on-scroll text-center group border-t-4 border-t-teal-500" style="transition-delay: 0.2s;">
+                <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-teal-500" data-stagger-delay="0.3s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">30s</div>
                     <div class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-6">The Sandwich Gen</div>
                     <p class="text-slate-400 leading-relaxed text-sm md:text-base">
@@ -382,7 +396,7 @@
             <div class="section-line"></div>
         </section>
 
-        <!-- 4. FEMALE SESSION -->
+        <!-- 4. FEMALE SESSION (Code Reverted as requested with CSS Fix) -->
         <section id="female" class="items-center justify-center bg-gradient-to-r from-transparent to-pink-900/10">
             <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal-on-scroll order-2 md:order-1">
@@ -398,9 +412,9 @@
                     </div>
                 </div>
 
-                <div class="glass-pink p-8 md:p-10 rounded-3xl reveal-on-scroll order-1 md:order-2">
+                <div class="glass-pink p-8 md:p-10 rounded-3xl stagger-item order-1 md:order-2" data-stagger-delay="0.1s">
                     <h3 class="text-white font-bold mb-10 text-xl">女性諮商需求增長 (YoY)</h3>
-                    <div class="flex items-end gap-6 h-72 border-b border-white/20 pb-4">
+                    <div class="flex items-end gap-3 md:gap-6 h-72 border-b border-white/20 pb-4">
                         <div class="w-1/3 flex flex-col justify-end items-center h-full group">
                             <div class="text-slate-400 text-xs mb-2 opacity-0 group-hover:opacity-100 transition-opacity">2023</div>
                             <div class="bar-fill bg-pink-900/80" style="--target-height: 40%"></div>
@@ -838,6 +852,11 @@
         // 5. Scroll Interaction & Mouse
         const femaleSection = document.getElementById('female');
         const glassPanels = document.querySelectorAll('.glass-panel');
+        const navLogo = document.getElementById('nav-logo');
+        const heroTitleMain = document.getElementById('hero-title-main');
+        const glitchTitle = document.getElementById('glitch-title');
+
+        // Mouse movement for glow effect on cards
         document.addEventListener('mousemove', e => {
             glassPanels.forEach(panel => {
                 const rect = panel.getBoundingClientRect();
@@ -847,8 +866,24 @@
                 panel.style.setProperty('--mouse-y', `${y}px`);
             });
         });
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
+        
+        lenis.on('scroll', ({ scroll }) => {
+            const scrollY = scroll; // Use Lenis scroll value
+            
+            // Hero Parallax (Issue 1 fix)
+            if (heroTitleMain && glitchTitle) {
+                // Apply parallax effects based on scroll value
+                heroTitleMain.style.transform = `translateY(${scrollY * -0.4}px)`; // Upwards (faster)
+                glitchTitle.style.transform = `translateY(${scrollY * 0.2}px)`; // Downwards (slower)
+            }
+            
+            // Logo Scroll Rotation
+            if (navLogo) {
+                const scrollFactor = scrollY * 0.01;
+                navLogo.style.transform = `rotate(${scrollFactor}deg)`;
+            }
+            
+            // Camera/Particle Color Shift
             if (camera && particlesMesh) {
                 particlesMesh.rotation.y = scrollY * 0.0005;
                 camera.position.y = scrollY * -0.01; 
@@ -862,16 +897,52 @@
                 }
             }
         });
+        
+        // 6. Intersection Observer for Reveal and Transitions
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                const el = entry.target;
+                
                 if(entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    el.classList.add('visible');
+                } else {
+                    // Optional: remove visible class on exit for re-trigger (but keeps it simple for now)
+                    // el.classList.remove('visible');
+                }
+                
+                // Break Section Transition (Issue 3 fix)
+                if (el.id === 'break-section') {
+                    const h2 = document.getElementById('break-text-h2');
+                    const p = document.getElementById('break-text-p');
+                    
+                    if (entry.intersectionRatio > 0.6) {
+                         // Apply the flash effect when centered
+                        h2.style.transition = p.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                        h2.style.transform = 'scale(1.2)';
+                        p.style.transform = 'scale(1.2)';
+                        h2.style.opacity = p.style.opacity = 0.1;
+                    } else {
+                         // Reset state when leaving center
+                        h2.style.transition = p.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                        h2.style.transform = p.style.transform = 'scale(1)';
+                        h2.style.opacity = p.style.opacity = 1;
+                    }
                 }
             });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        }, { threshold: [0.1, 0.6, 0.9] }); // Increased threshold for centered detection
 
-        // 6. Gemini API Interaction
+        // Observe elements
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        document.querySelectorAll('.stagger-item').forEach(el => {
+            const delay = parseFloat(el.getAttribute('data-stagger-delay')) || 0;
+            el.style.transitionDelay = `${delay}s`;
+            observer.observe(el);
+        });
+        document.getElementById('break-section').classList.remove('reveal-on-scroll'); // Control break section separately
+        observer.observe(document.getElementById('break-section'));
+
+
+        // 7. Gemini API Interaction
         const aiBtn = document.getElementById('ai-btn');
         const aiInput = document.getElementById('ai-input');
         const aiResult = document.getElementById('ai-result');
