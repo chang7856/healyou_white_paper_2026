@@ -265,15 +265,21 @@
             <span class="font-display font-bold tracking-widest text-lg group-hover:text-teal-400 transition-colors">HEALYOU</span>
         </a>
         <div class="hidden lg:flex gap-8 font-mono text-xs text-slate-300">
-            <a href="#vision" class="hover:text-teal-400 transition-colors">VISION</a>
-            <a href="#market" class="hover:text-teal-400 transition-colors">MARKET</a>
-            <a href="#data" class="hover:text-teal-400 transition-colors">DATA</a>
-            <a href="#female" class="hover:text-pink-400 transition-colors">INSIGHTS</a>
+            <a href="#vision" class="hover:text-teal-400 transition-colors" data-i18n="nav-vision">VISION</a>
+            <a href="#market" class="hover:text-teal-400 transition-colors" data-i18n="nav-market">MARKET</a>
+            <a href="#data" class="hover:text-teal-400 transition-colors" data-i18n="nav-data">DATA</a>
+            <a href="#female" class="hover:text-pink-400 transition-colors" data-i18n="nav-insights">INSIGHTS</a>
         </div>
-        <a href="#future" class="border border-white/20 px-4 md:px-6 py-2 rounded-full font-mono text-xs hover:bg-white hover:text-black transition-all duration-300 overflow-hidden relative group">
-            <span class="relative z-10">GET REPORT</span>
-            <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out z-0"></div>
-        </a>
+        <div class="flex items-center gap-4">
+            <!-- Language Switcher -->
+            <button id="lang-btn" class="font-mono text-xs text-white hover:text-teal-400 transition-colors">
+                EN
+            </button>
+            <a href="#future" class="border border-white/20 px-4 md:px-6 py-2 rounded-full font-mono text-xs hover:bg-white hover:text-black transition-all duration-300 overflow-hidden relative group">
+                <span class="relative z-10" data-i18n="nav-download">GET REPORT</span>
+                <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out z-0"></div>
+            </a>
+        </div>
     </nav>
 
     <main>
@@ -282,15 +288,15 @@
             <div class="max-w-6xl relative z-10">
                 <div class="inline-flex items-center gap-2 px-3 py-1 border border-teal-500/30 bg-teal-900/10 text-teal-400 font-mono text-xs tracking-[0.2em] mb-8 backdrop-blur-md rounded-full opacity-0 animate-fade-in" style="animation-delay: 2s; animation-fill-mode: forwards;">
                     <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
-                    2025 WHITE PAPER
+                    <span data-i18n="hero-tag">2025 WHITE PAPER</span>
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl lg:text-9xl font-serif font-bold leading-none mb-8 tracking-tighter mix-blend-overlay">
-                    <span id="hero-title-main" class="block scramble-target relative z-10" data-text="184億美元">184億美元</span>
-                    <span id="glitch-title" class="block text-gradient-animate opacity-0 relative z-10" style="transition: opacity 0.5s;">的沈默</span>
+                    <span id="hero-title-main" class="block scramble-target relative z-10" data-i18n="hero-title1">184億美元</span>
+                    <span id="glitch-title" class="block text-gradient-animate opacity-0 relative z-10" style="transition: opacity 0.5s;" data-i18n="hero-title2">的沈默</span>
                 </h1>
                 
-                <p class="font-light text-slate-300 text-lg md:text-2xl max-w-2xl mx-auto mt-12 opacity-0 animate-fade-in fill-mode-forwards tracking-wide px-4" style="animation-delay: 2.5s;">
+                <p class="font-light text-slate-300 text-lg md:text-2xl max-w-2xl mx-auto mt-12 opacity-0 animate-fade-in fill-mode-forwards tracking-wide px-4" style="animation-delay: 2.5s;" data-i18n="hero-desc">
                     15 億人口的焦慮，正在尋找出口。<br>
                     揭開亞洲心理健康市場的結構性斷層。
                 </p>
@@ -306,22 +312,23 @@
             <div class="max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div class="reveal-on-scroll">
                     <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-8 text-white leading-[1.2]">
-                        當「面子」成為<br>最昂貴的<span class="text-teal-400 italic">醫療成本</span>
+                        <span data-i18n="market-title1">當「面子」成為</span><br>
+                        <span class="text-teal-400 italic" data-i18n="market-title2">最昂貴的醫療成本</span>
                     </h2>
-                    <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 text-justify border-l-2 border-teal-500/30 pl-6 stagger-item" data-stagger-delay="0.1s">
+                    <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-10 text-justify border-l-2 border-teal-500/30 pl-6 stagger-item" data-stagger-delay="0.1s" data-i18n="market-desc">
                         在華語社會，承認心理問題等同於承認失敗。這道隱形的「面子高牆」，讓 92% 的患者選擇沉默，直到崩潰。而匿名數位諮商，是唯一能穿透這道牆的「特洛伊木馬」。
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 md:gap-8">
                         <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors stagger-item" data-stagger-delay="0.2s">
-                            <div class="text-3xl md:text-4xl font-display font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">18 Mos</div>
-                            <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest">Treatment Delay</div>
-                            <p class="text-xs md:text-sm text-slate-400 mt-2">平均求助延遲期</p>
+                            <div class="text-3xl md:text-4xl font-display font-bold text-white mb-2 group-hover:text-teal-400 transition-colors" data-i18n="market-stat1-num">18 Mos</div>
+                            <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest" data-i18n="market-stat1-label">Treatment Delay</div>
+                            <p class="text-xs md:text-sm text-slate-400 mt-2" data-i18n="market-stat1-desc">平均求助延遲期</p>
                         </div>
                         <div class="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors stagger-item" data-stagger-delay="0.3s">
                             <div class="text-3xl md:text-4xl font-display font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">4.5x</div>
-                            <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest">Preference</div>
-                            <p class="text-xs md:text-sm text-slate-400 mt-2">數位匿名 vs 線下偏好</p>
+                            <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest" data-i18n="market-stat2-label">Preference</div>
+                            <p class="text-xs md:text-sm text-slate-400 mt-2" data-i18n="market-stat2-desc">數位匿名 vs 線下偏好</p>
                         </div>
                     </div>
                 </div>
@@ -330,15 +337,15 @@
                     <div class="absolute top-0 right-0 p-4 opacity-50">
                         <i data-lucide="shield-alert" class="text-teal-400 w-8 h-8"></i>
                     </div>
-                    <h3 class="font-bold text-white text-xl mb-10">文化防火牆效應 (Cultural Firewall)</h3>
+                    <h3 class="font-bold text-white text-xl mb-10" data-i18n="market-chart-title">文化防火牆效應 (Cultural Firewall)</h3>
                     <div class="space-y-10">
                         <div class="relative group">
-                            <div class="flex justify-between text-sm text-slate-400 mb-3"><span>傳統線下診所 (阻力極大)</span><span>+5% YoY</span></div>
+                            <div class="flex justify-between text-sm text-slate-400 mb-3"><span data-i18n="market-chart-label1">傳統線下診所 (阻力極大)</span><span>+5% YoY</span></div>
                             <div class="h-1 bg-slate-800 w-full"><div class="h-full bg-slate-600 w-[20%] group-hover:bg-slate-500 transition-colors"></div></div>
                         </div>
                         <div class="relative group">
                             <div class="flex justify-between text-sm text-slate-400 mb-3">
-                                <span>數位心理平台 (穿透性高)</span>
+                                <span data-i18n="market-chart-label2">數位心理平台 (穿透性高)</span>
                                 <span class="text-teal-400 font-bold text-lg">+27% CAGR</span>
                             </div>
                             <div class="h-1 bg-slate-800 w-full"><div class="h-full bg-teal-500 w-[65%] shadow-[0_0_25px_rgba(45,212,191,0.6)] animate-pulse"></div></div>
@@ -352,8 +359,8 @@
         <!-- VISUAL BREAK SESSION 1 (Scale Transition) -->
         <section id="break-section" class="justify-center items-center py-24 md:py-32 bg-black">
             <div class="text-center reveal-on-scroll px-4" id="break-text-container">
-                <h2 id="break-text-h2" class="big-impact-text mb-4">99% 的焦慮</h2>
-                <p id="break-text-p" class="text-xl md:text-2xl text-teal-500 font-serif italic">死於開口之前。</p>
+                <h2 id="break-text-h2" class="big-impact-text mb-4" data-i18n="break-title">99% 的焦慮</h2>
+                <p id="break-text-p" class="text-xl md:text-2xl text-teal-500 font-serif italic" data-i18n="break-subtitle">死於開口之前。</p>
             </div>
         </section>
 
@@ -362,8 +369,8 @@
             <div class="max-w-4xl w-full mx-auto mb-16 text-center reveal-on-scroll">
                 <span class="text-teal-500 font-mono text-xs uppercase tracking-widest">/// The Signal</span>
                 <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mt-6 leading-tight">
-                    凌晨 2 點的<span class="text-indigo-400 italic px-2">集體失眠</span><br>
-                    數據背後的求救信號
+                    <span data-i18n="data-title1">凌晨 2 點的</span><span class="text-indigo-400 italic px-2" data-i18n="data-title2">集體失眠</span><br>
+                    <span data-i18n="data-title3">數據背後的求救信號</span>
                 </h2>
             </div>
 
@@ -372,7 +379,7 @@
                 <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-indigo-500" data-stagger-delay="0.1s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">02:00</div>
                     <div class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-6">Peak Hour</div>
-                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base" data-i18n="data-card1-desc">
                         這不是失眠，是清醒的痛苦。<br>68% 的求助發生在深夜，<br>因為白天我們都在「表演正常」。
                     </p>
                 </div>
@@ -380,7 +387,7 @@
                 <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-pink-500" data-stagger-delay="0.2s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">72%</div>
                     <div class="text-xs font-bold text-pink-400 uppercase tracking-widest mb-6">Female Users</div>
-                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base" data-i18n="data-card2-desc">
                         女性承擔了這個社會<br>絕大多數的情緒勞動。<br>她們是家庭與職場的雙重受災戶。
                     </p>
                 </div>
@@ -388,7 +395,7 @@
                 <div class="glass-panel p-8 md:p-10 rounded-2xl stagger-item text-center group border-t-4 border-t-teal-500" data-stagger-delay="0.3s">
                     <div class="text-4xl md:text-5xl font-display font-bold text-white mb-4">30s</div>
                     <div class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-6">The Sandwich Gen</div>
-                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base" data-i18n="data-card3-desc">
                         28-35 歲是焦慮的震央。<br>面對房價、婚戀與職場內捲，<br>這一代人正在集體燃燒殆盡。
                     </p>
                 </div>
@@ -396,38 +403,44 @@
             <div class="section-line"></div>
         </section>
 
-        <!-- 4. FEMALE SESSION (Code Reverted as requested with CSS Fix) -->
+        <!-- 4. FEMALE SESSION -->
         <section id="female" class="items-center justify-center bg-gradient-to-r from-transparent to-pink-900/10">
             <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal-on-scroll order-2 md:order-1">
                     <span class="text-pink-500 font-mono text-xs uppercase tracking-widest mb-4 block">/// Deep Dive</span>
                     <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8 leading-tight">
-                        完美主義的代價：<br>華語女性的<span class="text-pink-400 italic">「微笑憂鬱」</span>
+                        <span data-i18n="female-title1">完美主義的代價：</span><br>
+                        <span class="text-pink-400 italic" data-i18n="female-title2">華語女性的「微笑憂鬱」</span>
                     </h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8" data-i18n="female-desc">
                         她們是盡職的母親、能幹的主管、孝順的女兒。在外人眼中，她們擁有一切；但在 HealYou 的數據中，她們是最高風險的族群。這種「高功能焦慮（High-Functioning Anxiety）」正在吞噬一代女性。
                     </p>
                     <div class="inline-block border-l-4 border-pink-500 pl-6 py-2">
-                        <p class="text-white font-bold text-xl md:text-2xl italic">"情緒價值，是她們最昂貴的奢侈品。"</p>
+                        <p class="text-white font-bold text-xl md:text-2xl italic" data-i18n="female-quote">"情緒價值，是她們最昂貴的奢侈品。"</p>
                     </div>
                 </div>
 
                 <div class="glass-pink p-8 md:p-10 rounded-3xl stagger-item order-1 md:order-2" data-stagger-delay="0.1s">
-                    <h3 class="text-white font-bold mb-10 text-xl">女性諮商需求增長 (YoY)</h3>
+                    <h3 class="text-white font-bold mb-10 text-xl" data-i18n="female-chart-title">女性諮商需求增長 (YoY)</h3>
                     <div class="flex items-end gap-3 md:gap-6 h-72 border-b border-white/20 pb-4">
                         <div class="w-1/3 flex flex-col justify-end items-center h-full group">
-                            <div class="text-slate-400 text-xs mb-2 opacity-0 group-hover:opacity-100 transition-opacity">2023</div>
-                            <div class="bar-fill bg-pink-900/80" style="--target-height: 40%"></div>
+                            <div class="text-pink-300 font-bold text-xs mb-2 opacity-0 group-hover:opacity-100 transition-opacity">+45%</div>
+                            <div class="text-slate-400 text-xs mb-1">2023</div>
+                            <!-- FIXED BAR: Reverted to solid pink-900/80 -->
+                            <div class="bar-fill bg-pink-900/80" style="--target-height: 20%"></div>
                         </div>
                         <div class="w-1/3 flex flex-col justify-end items-center h-full group">
-                            <div class="text-slate-400 text-xs mb-2 opacity-0 group-hover:opacity-100 transition-opacity">2024</div>
-                            <div class="bar-fill bg-pink-700" style="--target-height: 65%"></div>
+                            <div class="text-pink-300 font-bold text-xs mb-2 opacity-0 group-hover:opacity-100 transition-opacity">+120%</div>
+                            <div class="text-slate-400 text-xs mb-1">2024</div>
+                            <!-- FIXED BAR: Reverted to solid pink-700 -->
+                            <div class="bar-fill bg-pink-700" style="--target-height: 45%"></div>
                         </div>
                         <div class="w-1/3 flex flex-col justify-end items-center h-full relative">
                             <div class="absolute -top-12 bg-white text-pink-600 font-bold text-sm px-3 py-1 rounded shadow-lg animate-bounce">
                                 +240%
                             </div>
                             <div class="text-white font-bold text-sm mb-3">2025 (Est.)</div>
+                            <!-- FINAL FIXED BAR COLOR: BRIGHTEST PINK (Gradient) -->
                             <div class="bar-fill bg-gradient-to-t from-pink-600 to-pink-400 shadow-[0_0_40px_rgba(244,114,182,0.6)]" style="--target-height: 90%"></div>
                         </div>
                     </div>
@@ -442,10 +455,11 @@
             <div class="max-w-4xl mx-auto reveal-on-scroll px-4">
                 <span class="text-teal-500 font-mono text-xs uppercase tracking-widest mb-6 block">/// The Outlook</span>
                 <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 leading-tight">
-                    2030 預言：<br>心理健康是下一個<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-500 block mt-2">「數位房地產」</span>
+                    <span data-i18n="future-title1">2030 預言：</span><br>
+                    <span data-i18n="future-title2">心理健康是下一個</span><br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-500 block mt-2" data-i18n="future-title3">「數位房地產」</span>
                 </h2>
-                <p class="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">
+                <p class="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto px-4" data-i18n="future-desc">
                     它不再是醫療支出，而是資產配置。<br>
                     掌握情緒數據的企業，將掌握下一個十年的消費者心智與生產力。
                 </p>
@@ -454,21 +468,21 @@
                 <div class="glass-panel p-8 rounded-2xl max-w-md mx-auto text-left border-t-2 border-t-teal-500/50">
                     <h3 class="text-white font-bold mb-4 flex items-center gap-2">
                         <i data-lucide="lock" class="w-4 h-4 text-teal-400"></i>
-                        解鎖完整報告 (48頁 PDF)
+                        <span data-i18n="form-title">解鎖完整報告 (48頁 PDF)</span>
                     </h3>
                     <form id="download-form" class="space-y-4">
                         <div>
-                            <input type="text" id="lead-name" placeholder="您的姓名 / 稱呼" required class="ai-input w-full px-4 py-3 rounded-lg text-base bg-black/30 border-white/10 focus:border-teal-500">
+                            <input type="text" id="lead-name" placeholder="您的姓名 / 稱呼" required class="ai-input w-full px-4 py-3 rounded-lg text-base bg-black/30 border-white/10 focus:border-teal-500" data-i18n-placeholder="form-name-ph">
                         </div>
                         <div>
-                            <input type="email" id="lead-email" placeholder="企業信箱 (Business Email)" required class="ai-input w-full px-4 py-3 rounded-lg text-base bg-black/30 border-white/10 focus:border-teal-500">
+                            <input type="email" id="lead-email" placeholder="企業信箱 (Business Email)" required class="ai-input w-full px-4 py-3 rounded-lg text-base bg-black/30 border-white/10 focus:border-teal-500" data-i18n-placeholder="form-email-ph">
                         </div>
                         <button type="submit" id="download-btn" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-lg transition-all shadow-[0_0_20px_rgba(45,212,191,0.2)] hover:shadow-[0_0_30px_rgba(45,212,191,0.4)] flex justify-center items-center gap-2 group">
-                            <span>免費下載完整版</span>
+                            <span data-i18n="form-btn">免費下載完整版</span>
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </form>
-                    <p class="text-xs text-slate-500 mt-4 text-center">
+                    <p class="text-xs text-slate-500 mt-4 text-center" data-i18n="form-disclaimer">
                         提交即代表同意接收 HealYou 產業週報，可隨時取消訂閱。
                     </p>
                 </div>
@@ -481,12 +495,12 @@
                 <div>
                     <span class="text-teal-500 font-bold uppercase tracking-widest text-xs mb-4 block">Our Solution</span>
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">聊心茶室 HealYou</h2>
-                    <p class="text-slate-400 leading-relaxed mb-8 text-lg">
+                    <p class="text-slate-400 leading-relaxed mb-8 text-lg" data-i18n="healyou-desc">
                         我們打造的不是診所，而是一個數位的「心靈避難所」。<br>
                         在這裡，沒有標籤，只有傾聽。透過嚴選的諮商師與極致的隱私保護，讓每一次對話都成為療癒的開始。
                     </p>
                     <a href="https://www.healyou.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-teal-400 hover:text-white transition-colors border-b border-teal-400/50 pb-1">
-                        訪問官網 www.healyou.io <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <span data-i18n="healyou-link">訪問官網 www.healyou.io</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
                 
@@ -501,16 +515,16 @@
                             <i data-lucide="sparkles" class="w-6 h-6 text-teal-500"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl text-white font-bold">AI 情緒解碼 (Beta)</h3>
+                            <h3 class="text-xl text-white font-bold" data-i18n="ai-title">AI 情緒解碼 (Beta)</h3>
                             <p class="text-xs text-slate-500 uppercase tracking-widest">Powered by HealYou</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
                         <div>
-                            <label class="text-xs text-slate-400 block mb-2">試著輸入你現在的感受 (例：我最近工作壓力很大...)</label>
+                            <label class="text-xs text-slate-400 block mb-2" data-i18n="ai-label">試著輸入你現在的感受 (例：我最近工作壓力很大...)</label>
                             <div class="flex gap-2">
-                                <input type="text" id="ai-input" class="ai-input flex-1 min-w-0 px-4 py-3 rounded-xl text-base" placeholder="在此輸入...">
+                                <input type="text" id="ai-input" class="ai-input flex-1 min-w-0 px-4 py-3 rounded-xl text-base" placeholder="在此輸入..." data-i18n-placeholder="ai-ph">
                                 <button id="ai-btn" class="bg-teal-600 hover:bg-teal-500 text-white p-3 rounded-xl transition-colors shrink-0">
                                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                                 </button>
@@ -541,23 +555,23 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 mb-16">
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-white mb-6">ESG 與企業方案</h3>
-                        <p class="text-slate-400 mb-8 max-w-md">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-6" data-i18n="esg-title">ESG 與企業方案</h3>
+                        <p class="text-slate-400 mb-8 max-w-md" data-i18n="esg-desc">
                             員工心理健康已成為企業治理的關鍵指標。我們提供企業專屬的管理後台 (Dashboard) 與 EAP 方案。
                         </p>
                         <a href="mailto:support@healyou.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white bg-slate-800 px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors border border-slate-700 hover:border-teal-500">
                             <i data-lucide="mail" class="w-4 h-4 text-teal-400"></i>
-                            <span>聯繫企業方案：support@healyou.io</span>
+                            <span data-i18n="esg-contact">聯繫企業方案：support@healyou.io</span>
                         </a>
 
                         <!-- B2B AI Insight Generator -->
                         <div class="mt-10 p-6 bg-slate-800/50 rounded-xl border border-slate-700">
                             <div class="flex items-center gap-3 mb-4">
                                 <i data-lucide="bar-chart-3" class="text-teal-400 w-5 h-5"></i>
-                                <h4 class="text-white font-bold text-sm">ESG 產業洞察引擎 (Beta)</h4>
+                                <h4 class="text-white font-bold text-sm" data-i18n="b2b-ai-title">ESG 產業洞察引擎 (Beta)</h4>
                             </div>
                             <div class="flex gap-2 mb-3">
-                                <input type="text" id="esg-input" class="ai-input flex-1 min-w-0 px-3 py-2 rounded-lg text-base" placeholder="輸入您的產業 (例: 金融業)">
+                                <input type="text" id="esg-input" class="ai-input flex-1 min-w-0 px-3 py-2 rounded-lg text-base" placeholder="輸入您的產業 (例: 金融業)" data-i18n-placeholder="b2b-ai-ph">
                                 <button id="esg-btn" class="bg-teal-600 hover:bg-teal-500 text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors shrink-0">
                                     Generate
                                 </button>
@@ -588,7 +602,7 @@
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // ============================================================
-        // [GITHUB DEPLOYMENT 設定區] - 使用您的專案配置
+        // [GITHUB DEPLOYMENT 設定區]
         // ============================================================
         const myFirebaseConfig = {
             apiKey: "AIzaSyB2P0ODkqayiwpEYbbtSCd3AX4Yy_SKMl4",
@@ -601,22 +615,18 @@
         };
         // ============================================================
 
-        // 自動判斷環境：如果有環境變數(預覽中)則使用環境變數，否則使用您的設定(GitHub中)
         const isPreviewEnv = typeof __firebase_config !== 'undefined';
         const firebaseConfig = isPreviewEnv ? JSON.parse(__firebase_config) : myFirebaseConfig;
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
 
-        // Robust Auth Init
         const initAuth = async () => {
             try {
                 if (isPreviewEnv && typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
                     await signInWithCustomToken(auth, __initial_auth_token);
                 } else {
-                    // 在您的 GitHub Pages 上會執行這行（匿名登入）
                     await signInAnonymously(auth);
                 }
             } catch (error) {
@@ -625,7 +635,6 @@
         };
         initAuth();
 
-        // Handle Download Form with Firestore
         const downloadForm = document.getElementById('download-form');
         const nameInput = document.getElementById('lead-name');
         const emailInput = document.getElementById('lead-email');
@@ -636,27 +645,22 @@
                 e.preventDefault();
                 const originalText = downloadBtn.innerHTML;
                 
-                // 1. UI Loading State
                 downloadBtn.innerHTML = `<span class="animate-pulse">正在建立安全連線...</span>`;
                 downloadBtn.disabled = true;
 
                 try {
-                    // 2. Ensure Auth
                     if (!auth.currentUser) {
                         await initAuth();
                     }
 
-                    // 3. Determine Collection Path
                     let collectionRef;
                     if (isPreviewEnv) {
                         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app';
                         collectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'leads');
                     } else {
-                        // GitHub環境會使用 'leads' 集合 (需在 Firebase Console 中設定 Rule)
                         collectionRef = collection(db, 'leads');
                     }
 
-                    // 4. Save to Firestore
                     await addDoc(collectionRef, {
                         name: nameInput.value,
                         email: emailInput.value,
@@ -664,16 +668,19 @@
                         timestamp: serverTimestamp()
                     });
 
-                    // 5. Success UI
                     downloadBtn.innerHTML = `<span class="text-white flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> 已寄送至信箱</span>`;
                     downloadBtn.classList.remove('bg-teal-600', 'hover:bg-teal-500');
                     downloadBtn.classList.add('bg-green-600');
                     
-                    // 6. Trigger PDF Download (Simulated)
+                    // Trigger PDF Download based on Language
+                    const currentLang = document.documentElement.lang;
+                    const pdfUrl = currentLang === 'en' 
+                        ? 'https://drive.google.com/file/d/1W8iufppD8iGpOy7ZfZ3ZavUbrnkdr1Pr/view?usp=drive_link' 
+                        : 'https://drive.google.com/file/d/11o5roptzeILQILN3J3Wlfrkv_AV2drDF/view?usp=drive_link';
+
                     setTimeout(() => {
-                        alert('系統提示：HealYou_Whitepaper_2025.pdf 已開始下載');
+                        window.open(pdfUrl, '_blank');
                         
-                        // Reset Form after delay
                         setTimeout(() => {
                             downloadForm.reset();
                             downloadBtn.innerHTML = originalText;
@@ -685,7 +692,6 @@
 
                 } catch (error) {
                     console.error("Submission Error:", error);
-                    // 錯誤提示
                     downloadBtn.innerHTML = `<span class="text-white">傳送失敗，請稍後再試</span>`;
                     downloadBtn.classList.add('bg-red-600');
                     setTimeout(() => {
@@ -702,7 +708,148 @@
         lucide.createIcons();
         const apiKey = "AIzaSyDe3JHozQQlX9ga_uo-Ajr3Hoh_H8WfGrA"; 
 
-        // 1. Lenis Smooth Scroll Setup
+        // Language Translation Data
+        const translations = {
+            zh: {
+                "nav-vision": "VISION",
+                "nav-market": "MARKET",
+                "nav-data": "DATA",
+                "nav-insights": "INSIGHTS",
+                "nav-download": "GET REPORT",
+                "hero-tag": "2025 WHITE PAPER",
+                "hero-title1": "184億美元",
+                "hero-title2": "的沈默",
+                "hero-desc": "15 億人口的焦慮，正在尋找出口。<br>揭開亞洲心理健康市場的結構性斷層。",
+                "market-title1": "當「面子」成為",
+                "market-title2": "最昂貴的醫療成本",
+                "market-desc": "在華語社會，承認心理問題等同於承認失敗。這道隱形的「面子高牆」，讓 92% 的患者選擇沉默，直到崩潰。而匿名數位諮商，是唯一能穿透這道牆的「特洛伊木馬」。",
+                "market-stat1-num": "18 Months",
+                "market-stat1-label": "Treatment Delay",
+                "market-stat1-desc": "平均求助延遲期",
+                "market-stat2-label": "Preference",
+                "market-stat2-desc": "數位匿名 vs 線下偏好",
+                "market-chart-title": "文化防火牆效應 (Cultural Firewall)",
+                "market-chart-label1": "傳統線下診所 (阻力極大)",
+                "market-chart-label2": "數位心理平台 (穿透性高)",
+                "break-title": "99% 的焦慮",
+                "break-subtitle": "死於開口之前。",
+                "data-title1": "凌晨 2 點的",
+                "data-title2": "集體失眠",
+                "data-title3": "數據背後的求救信號",
+                "data-card1-desc": "這不是失眠，是清醒的痛苦。<br>68% 的求助發生在深夜，<br>因為白天我們都在「表演正常」。",
+                "data-card2-desc": "女性承擔了這個社會<br>絕大多數的情緒勞動。<br>她們是家庭與職場的雙重受災戶。",
+                "data-card3-desc": "28-35 歲是焦慮的震央。<br>面對房價、婚戀與職場內捲，<br>這一代人正在集體燃燒殆盡。",
+                "female-title1": "完美主義的代價：",
+                "female-title2": "華語女性的「微笑憂鬱」",
+                "female-desc": "她們是盡職的母親、能幹的主管、孝順的女兒。在外人眼中，她們擁有一切；但在 HealYou 的數據中，她們是最高風險的族群。這種「高功能焦慮（High-Functioning Anxiety）」正在吞噬一代女性。",
+                "female-quote": "\"情緒價值，是她們最昂貴的奢侈品。\"",
+                "female-chart-title": "女性諮商需求增長 (YoY)",
+                "future-title1": "2030 預言：",
+                "future-title2": "心理健康是下一個",
+                "future-title3": "「數位房地產」",
+                "future-desc": "它不再是醫療支出，而是資產配置。<br>掌握情緒數據的企業，將掌握下一個十年的消費者心智與生產力。",
+                "form-title": "解鎖完整報告 (48頁 PDF)",
+                "form-name-ph": "您的姓名 / 稱呼",
+                "form-email-ph": "企業信箱 (Business Email)",
+                "form-btn": "免費下載完整版",
+                "form-disclaimer": "提交即代表同意接收 HealYou 產業週報，可隨時取消訂閱。",
+                "healyou-desc": "我們打造的不是診所，而是一個數位的「心靈避難所」。<br>在這裡，沒有標籤，只有傾聽。透過嚴選的諮商師與極致的隱私保護，讓每一次對話都成為療癒的開始。",
+                "healyou-link": "訪問官網 www.healyou.io",
+                "ai-title": "AI 情緒解碼 (Beta)",
+                "ai-label": "試著輸入你現在的感受 (例：我最近工作壓力很大...)",
+                "ai-ph": "在此輸入...",
+                "esg-title": "ESG 與企業方案",
+                "esg-desc": "員工心理健康已成為企業治理的關鍵指標。我們提供企業專屬的管理後台 (Dashboard) 與 EAP 方案。",
+                "esg-contact": "聯繫企業方案：support@healyou.io",
+                "b2b-ai-title": "ESG 產業洞察引擎 (Beta)",
+                "b2b-ai-ph": "輸入您的產業 (例: 金融業)"
+            },
+            en: {
+                "nav-vision": "VISION",
+                "nav-market": "MARKET",
+                "nav-data": "DATA",
+                "nav-insights": "INSIGHTS",
+                "nav-download": "GET REPORT",
+                "hero-tag": "2025 WHITE PAPER",
+                "hero-title1": "$18.4 Billion",
+                "hero-title2": "Silence",
+                "hero-desc": "1.5 billion people are anxious and looking for a way out.<br>Uncovering the structural deficit in the Asian mental health market.",
+                "market-title1": "When \"Face\" Becomes",
+                "market-title2": "The Costliest Medical Expense",
+                "market-desc": "In Chinese society, admitting mental health issues equates to admitting failure. This invisible \"Face Wall\" silences 92% of patients until they collapse. Anonymous digital counseling is the only \"Trojan Horse\" that can penetrate this wall.",
+                "market-stat1-num": "18 Months",
+                "market-stat1-label": "Treatment Delay",
+                "market-stat1-desc": "Average delay in seeking help",
+                "market-stat2-label": "Preference",
+                "market-stat2-desc": "Digital Anon vs. Offline",
+                "market-chart-title": "Cultural Firewall Effect",
+                "market-chart-label1": "Traditional Clinics (High Resistance)",
+                "market-chart-label2": "Digital Platforms (High Penetration)",
+                "break-title": "99% of Anxiety",
+                "break-subtitle": "Dies before it is spoken.",
+                "data-title1": "The 2 AM",
+                "data-title2": "Collective Insomnia",
+                "data-title3": "The Distress Signal Behind Data",
+                "data-card1-desc": "It's not just insomnia, it's lucid suffering.<br>68% of help requests happen late at night,<br>because during the day we are all \"performing normal\".",
+                "data-card2-desc": "Women bear the vast majority<br>of emotional labor in this society.<br>They are dual victims of both home and workplace.",
+                "data-card3-desc": "Ages 28-35 are the epicenter of anxiety.<br>Facing housing prices, marriage, and workplace competition,<br>this generation is collectively burning out.",
+                "female-title1": "The Cost of Perfection:",
+                "female-title2": "Asian Women's \"Smiling Depression\"",
+                "female-desc": "They are dutiful mothers, capable executives, and filial daughters. To outsiders, they have it all; but in HealYou's data, they are the highest-risk group. This \"High-Functioning Anxiety\" is devouring a generation of women.",
+                "female-quote": "\"Emotional value is their most expensive luxury.\"",
+                "female-chart-title": "Female Counseling Demand Growth (YoY)",
+                "future-title1": "2030 Prediction:",
+                "future-title2": "Mental Health is the Next",
+                "future-title3": "\"Digital Real Estate\"",
+                "future-desc": "It is no longer a medical expense, but an asset allocation.<br>Companies that master emotional data will master consumer mindshare and productivity for the next decade.",
+                "form-title": "Unlock Full Report (48 Pages)",
+                "form-name-ph": "Your Name / Title",
+                "form-email-ph": "Business Email",
+                "form-btn": "Download Full Version",
+                "form-disclaimer": "By submitting, you agree to receive HealYou industry newsletters. You can unsubscribe at any time.",
+                "healyou-desc": "We are building not a clinic, but a digital \"sanctuary\".<br>Here, there are no labels, only listening. Through rigorously selected counselors and extreme privacy protection, every conversation becomes the beginning of healing.",
+                "healyou-link": "Visit Official Site www.healyou.io",
+                "ai-title": "AI Emotion Decoder (Beta)",
+                "ai-label": "Try typing how you feel right now (e.g., I'm so stressed at work...)",
+                "ai-ph": "Type here...",
+                "esg-title": "ESG & Enterprise Solutions",
+                "esg-desc": "Employee mental health has become a key indicator of corporate governance. We provide enterprise-exclusive Management Dashboards and EAP solutions.",
+                "esg-contact": "Contact Enterprise Sales: support@healyou.io",
+                "b2b-ai-title": "ESG Insight Engine (Beta)",
+                "b2b-ai-ph": "Enter your industry (e.g. Finance)"
+            }
+        };
+
+        // Lang Switch Logic
+        const langBtn = document.getElementById('lang-btn');
+        let currentLang = 'zh';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+            langBtn.innerText = lang === 'zh' ? 'EN' : '中';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        langBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'zh' ? 'en' : 'zh';
+            setLanguage(newLang);
+        });
+
+        // Init Lenis
         const lenis = new Lenis({
             duration: 1.5,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -718,7 +865,7 @@
         }
         requestAnimationFrame(raf);
 
-        // 2. Preloader & Intro Animation
+        // Preloader & Intro
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             const glitchTitle = document.getElementById('glitch-title');
@@ -738,14 +885,18 @@
                     document.querySelectorAll('.scramble-target').forEach((el, index) => {
                         const fx = new TextScramble(el);
                         setTimeout(() => {
-                            fx.setText(el.getAttribute('data-text'));
+                            const targetText = el.getAttribute('data-text') || el.innerText;
+                            if (targetText) {
+                                fx.setText(targetText);
+                            }
                         }, 500 + (index * 600));
                     });
                 }, 800);
             }, 1500);
         });
 
-        // 3. Text Scramble Logic
+        // ... (TextScramble, ThreeJS, Scroll Logic same as before) ...
+
         class TextScramble {
             constructor(el) {
                 this.el = el;
@@ -797,7 +948,6 @@
             }
         }
 
-        // 4. Three.js Background
         let particlesMaterial, particlesMesh, camera;
         const initThreeJS = () => {
             const container = document.getElementById('canvas-container');
@@ -849,14 +999,12 @@
             });
         };
 
-        // 5. Scroll Interaction & Mouse
         const femaleSection = document.getElementById('female');
         const glassPanels = document.querySelectorAll('.glass-panel');
         const navLogo = document.getElementById('nav-logo');
         const heroTitleMain = document.getElementById('hero-title-main');
         const glitchTitle = document.getElementById('glitch-title');
 
-        // Mouse movement for glow effect on cards
         document.addEventListener('mousemove', e => {
             glassPanels.forEach(panel => {
                 const rect = panel.getBoundingClientRect();
@@ -868,22 +1016,18 @@
         });
         
         lenis.on('scroll', ({ scroll }) => {
-            const scrollY = scroll; // Use Lenis scroll value
+            const scrollY = scroll; 
             
-            // Hero Parallax (Issue 1 fix)
             if (heroTitleMain && glitchTitle) {
-                // Apply parallax effects based on scroll value
-                heroTitleMain.style.transform = `translateY(${scrollY * -0.4}px)`; // Upwards (faster)
-                glitchTitle.style.transform = `translateY(${scrollY * 0.2}px)`; // Downwards (slower)
+                heroTitleMain.style.transform = `translateY(${scrollY * -0.4}px)`; 
+                glitchTitle.style.transform = `translateY(${scrollY * 0.2}px)`; 
             }
             
-            // Logo Scroll Rotation
             if (navLogo) {
                 const scrollFactor = scrollY * 0.01;
                 navLogo.style.transform = `rotate(${scrollFactor}deg)`;
             }
             
-            // Camera/Particle Color Shift
             if (camera && particlesMesh) {
                 particlesMesh.rotation.y = scrollY * 0.0005;
                 camera.position.y = scrollY * -0.01; 
@@ -898,51 +1042,42 @@
             }
         });
         
-        // 6. Intersection Observer for Reveal and Transitions
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const el = entry.target;
                 
                 if(entry.isIntersecting) {
                     el.classList.add('visible');
-                } else {
-                    // Optional: remove visible class on exit for re-trigger (but keeps it simple for now)
-                    // el.classList.remove('visible');
                 }
                 
-                // Break Section Transition (Issue 3 fix)
                 if (el.id === 'break-section') {
                     const h2 = document.getElementById('break-text-h2');
                     const p = document.getElementById('break-text-p');
                     
                     if (entry.intersectionRatio > 0.6) {
-                         // Apply the flash effect when centered
                         h2.style.transition = p.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
                         h2.style.transform = 'scale(1.2)';
                         p.style.transform = 'scale(1.2)';
                         h2.style.opacity = p.style.opacity = 0.1;
                     } else {
-                         // Reset state when leaving center
                         h2.style.transition = p.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
                         h2.style.transform = p.style.transform = 'scale(1)';
                         h2.style.opacity = p.style.opacity = 1;
                     }
                 }
             });
-        }, { threshold: [0.1, 0.6, 0.9] }); // Increased threshold for centered detection
+        }, { threshold: [0.1, 0.6, 0.9] });
 
-        // Observe elements
         document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
         document.querySelectorAll('.stagger-item').forEach(el => {
             const delay = parseFloat(el.getAttribute('data-stagger-delay')) || 0;
             el.style.transitionDelay = `${delay}s`;
             observer.observe(el);
         });
-        document.getElementById('break-section').classList.remove('reveal-on-scroll'); // Control break section separately
+        document.getElementById('break-section').classList.remove('reveal-on-scroll'); 
         observer.observe(document.getElementById('break-section'));
 
-
-        // 7. Gemini API Interaction
+        // Gemini & AI
         const aiBtn = document.getElementById('ai-btn');
         const aiInput = document.getElementById('ai-input');
         const aiResult = document.getElementById('ai-result');
@@ -958,7 +1093,6 @@
         const esgLoading = document.getElementById('esg-loading');
         const esgContent = document.getElementById('esg-content');
 
-        // Typewriter Effect
         function typeWriter(element, text, speed = 30) {
             element.innerHTML = "";
             let i = 0;
